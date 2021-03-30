@@ -1,0 +1,15 @@
+version: '2'
+services:
+  thegraph_api:
+    image: ${CONTAINER_IMAGE}
+    network_mode: "host"
+    environment:
+    - PROJECT=${PROJECT}
+    - SERVICE=${CONTAINER}
+    - WORKON_HOME=/usr/local/lib/properly_thegraph_api/.env
+    - PYTHONPATH=/usr/local/lib:/usr/local/lib/properly_thegraph_api
+    - COMMAND=poetry install
+    volumes:
+    - ${BASE_DIR}/properly_thegraph_api:/usr/local/lib/properly_thegraph_api
+    - ${BASE_DIR}/properly_thegraph_api/compose/bootstrap.sh:/usr/local/bin/bootstrap.sh
+    command: bootstrap.sh

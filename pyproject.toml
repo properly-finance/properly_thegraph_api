@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "properly_thegraph_api"
+version = "1.0.0"
+description = ""
+authors = ["Den Elston <elstton@yahoo.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+flask = "^1.0"
+gunicorn = "^19.9"
+requests = "^2.23.0"
+python-rapidjson = "^1.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^.*"
+ipdb = "^.*"
+pytest-mock = "^.*"
+pytest-flask = "^1.2.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

@@ -1,0 +1,27 @@
+version: '2'
+networks:
+  properlynet:
+    driver: bridge
+services:
+  thegraph_api:
+    image: ${CONTAINER_IMAGE}
+    networks:
+    - properlynet
+    expose:
+    - "${THEGRAPH_API_PORT}"    
+    environment:
+    - PROJECT=${PROJECT}
+    - SERVICE=${CONTAINER}
+    - WORKON_HOME=/usr/local/lib/properly_thegraph_api/.env
+    - PYTHONPATH=/usr/local/lib:/usr/local/lib/properly_thegraph_api
+    # ..
+    - SECRET_KEY=${SECRET_KEY}
+    - FLASK_ENV=${THEGRAPH_API_FLASK_ENV}
+    - FLASK_APP=properly_thegraph_api/app.py    
+    - DEBUG=${DEBUG}    
+    - PORT=${THEGRAPH_API_PORT}
+    # ..
+    volumes:
+    - ${BASE_DIR}/properly_thegraph_api:/usr/local/lib/properly_thegraph_api
+    - ${BASE_DIR}/properly_thegraph_api/compose/runapp.sh:/usr/local/bin/runapp.sh
+    working_dir: /usr/local/lib/properly_thegraph_api

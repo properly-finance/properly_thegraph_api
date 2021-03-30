@@ -1,0 +1,4 @@
+flask==1.0
+gunicorn==19.9
+requests==2.23.0
+python-rapidjson==1.0.0

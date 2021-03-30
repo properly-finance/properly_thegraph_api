@@ -1,0 +1,13 @@
+version: '2'
+networks:
+  properlynet:
+    driver: bridge
+services:
+  thegraph_api:
+    ports:
+    - "${THEGRAPH_API_PORT}:${THEGRAPH_API_PORT}"
+    environment:
+    - COMMAND=flask run --host 0.0.0.0 --port @{PORT}
+    - FIXTURE_PATH=/usr/local/lib/thegraph_api_fixtures
+    volumes:
+    - ${BASE_DIR}/properly_thegraph_api/fixtures:/usr/local/lib/thegraph_api_fixtures
