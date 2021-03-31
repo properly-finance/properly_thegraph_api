@@ -6,11 +6,7 @@ def test_riseup(app):
 
 def test_endpoints(app):
     endpoints = [rule.endpoint for rule in app.url_map.iter_rules()]
-    # estate
-    assert 'api_estate.test' in endpoints
-#     assert 'api_v1.user_registration_2' in endpoints
-#     assert 'api_v1.user_no_exists_2' in endpoints
-#     # payments
-#     assert 'api_v1.payment_plans_2' in endpoints
-#     assert 'api_v1.payment_subscribe_2' in endpoints
-#     assert 'api_v1.payment_webhook_2' in endpoints
+    # print(endpoints)
+    assert 'decentraland_estate_api.ping' in endpoints
+    assert 'decentraland_estate_api.echo' in endpoints
+    assert 'aave_flashloans_api.amount_mean' in endpoints

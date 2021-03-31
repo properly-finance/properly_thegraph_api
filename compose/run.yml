@@ -21,6 +21,8 @@ services:
     - DEBUG=${DEBUG}    
     - PORT=${THEGRAPH_API_PORT}
     # ..
+    - THEGRAPH_DECENTRALAND_URL=${THEGRAPH_DECENTRALAND_URL}
+    - THEGRAPH_AAVE_URL=${THEGRAPH_AAVE_URL}
     volumes:
     - ${BASE_DIR}/properly_thegraph_api:/usr/local/lib/properly_thegraph_api
     - ${BASE_DIR}/properly_thegraph_api/compose/runapp.sh:/usr/local/bin/runapp.sh
