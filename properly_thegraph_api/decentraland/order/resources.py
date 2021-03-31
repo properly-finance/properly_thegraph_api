@@ -33,4 +33,4 @@ def amount_mean(count: int = 10):
     np_arr = np.array([int(rec['price']) for rec in data])
     np_mean = np.mean(np_arr)
 
-    return jsonify({'count': count, 'mean': f'{int(np_mean)}'})
+    return jsonify({'count': count, 'mean': int(np_mean)})
