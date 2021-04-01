@@ -1,0 +1,76 @@
+{
+  "data": {
+    "nfts": [
+      {
+        "activeOrder": {
+          "category": "parcel",
+          "price": "7777000000000000000000",
+          "status": "open"
+        }
+      },
+      {
+        "activeOrder": {
+          "category": "parcel",
+          "price": "7777000000000000000000",
+          "status": "open"
+        }
+      },
+      {
+        "activeOrder": {
+          "category": "parcel",
+          "price": "9999000000000000000000",
+          "status": "open"
+        }
+      },
+      {
+        "activeOrder": {
+          "category": "estate",
+          "price": "60000000000000000000000",
+          "status": "open"
+        }
+      },
+      {
+        "activeOrder": {
+          "category": "parcel",
+          "price": "8149000000000000000000",
+          "status": "open"
+        }
+      },
+      {
+        "activeOrder": {
+          "category": "estate",
+          "price": "95000000000000000000000",
+          "status": "open"
+        }
+      },
+      {
+        "activeOrder": {
+          "category": "estate",
+          "price": "85000000000000000000000",
+          "status": "open"
+        }
+      },
+      {
+        "activeOrder": {
+          "category": "estate",
+          "price": "29000000000000000000000",
+          "status": "open"
+        }
+      },
+      {
+        "activeOrder": {
+          "category": "parcel",
+          "price": "29999000000000000000000",
+          "status": "open"
+        }
+      },
+      {
+        "activeOrder": {
+          "category": "parcel",
+          "price": "14999000000000000000000",
+          "status": "open"
+        }
+      }
+    ]
+  }
+}
