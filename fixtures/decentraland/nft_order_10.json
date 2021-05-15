@@ -3,73 +3,69 @@
     "nfts": [
       {
         "activeOrder": {
-          "category": "parcel",
-          "price": "7777000000000000000000",
-          "status": "open"
+          "price": "4580000000000000000000"
+        },
+        "estate": null
+      },
+      {
+        "activeOrder": {
+          "price": "20000000000000000000000"
+        },
+        "estate": null
+      },
+      {
+        "activeOrder": {
+          "price": "125000000000000000000000"
+        },
+        "estate": {
+          "size": 13
         }
       },
       {
         "activeOrder": {
-          "category": "parcel",
-          "price": "7777000000000000000000",
-          "status": "open"
+          "price": "28750000000000000000000"
+        },
+        "estate": {
+          "size": 4
         }
       },
       {
         "activeOrder": {
-          "category": "parcel",
-          "price": "9999000000000000000000",
-          "status": "open"
+          "price": "8000000000000000000000"
+        },
+        "estate": null
+      },
+      {
+        "activeOrder": {
+          "price": "4991000000000000000000"
+        },
+        "estate": null
+      },
+      {
+        "activeOrder": {
+          "price": "22500000000000000000000"
+        },
+        "estate": {
+          "size": 4
         }
       },
       {
         "activeOrder": {
-          "category": "estate",
-          "price": "60000000000000000000000",
-          "status": "open"
-        }
+          "price": "4050000000000000000000"
+        },
+        "estate": null
       },
       {
         "activeOrder": {
-          "category": "parcel",
-          "price": "8149000000000000000000",
-          "status": "open"
-        }
+          "price": "10999000000000000000000"
+        },
+        "estate": null
       },
       {
         "activeOrder": {
-          "category": "estate",
-          "price": "95000000000000000000000",
-          "status": "open"
-        }
-      },
-      {
-        "activeOrder": {
-          "category": "estate",
-          "price": "85000000000000000000000",
-          "status": "open"
-        }
-      },
-      {
-        "activeOrder": {
-          "category": "estate",
-          "price": "29000000000000000000000",
-          "status": "open"
-        }
-      },
-      {
-        "activeOrder": {
-          "category": "parcel",
-          "price": "29999000000000000000000",
-          "status": "open"
-        }
-      },
-      {
-        "activeOrder": {
-          "category": "parcel",
-          "price": "14999000000000000000000",
-          "status": "open"
-        }
+          "price": "10999000000000000000000"
+        },
+        "estate": null
       }
     ]
   }

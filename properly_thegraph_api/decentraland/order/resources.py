@@ -3,6 +3,7 @@ from http import HTTPStatus
 import numpy as np
 from decimal import Decimal
 from flask import Blueprint, jsonify, request, current_app as app
+from .utils import calc_price
 
 api = Blueprint("decentraland_orders_api",
                 __name__,
@@ -33,11 +34,13 @@ def amount_mean(count: int = 10):
           orderDirection: desc
           where: {
             searchOrderStatus: open
-            searchIsLand: true
           }
         ){
           activeOrder{
             price
+          }
+          estate {
+            size
           }
         }
       }
@@ -51,7 +54,9 @@ def amount_mean(count: int = 10):
         return jsonify({'count': count, 'mean': -1, 'error': response.text})
 
     data = response.json()['data']['nfts']
-    np_arr = np.array([int(rec['activeOrder']['price']) for rec in data])
+    np_arr = np.array([
+        calc_price(int(rec['activeOrder']['price']), rec['estate'])
+        for rec in data])
     np_mean = np.mean(np_arr)
 
     return jsonify({'count': count, 'mean': int(np_mean)})

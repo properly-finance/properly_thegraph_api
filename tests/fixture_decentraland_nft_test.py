@@ -8,6 +8,27 @@ def test_order_loader(
     graphql_wraper,
     count
 ):
+    # query = """
+    #   query fetchNFTS(
+    #     $count: Int,
+    #   ) {
+    #     nfts (
+    #       first:$count,
+    #       orderBy: searchOrderCreatedAt
+    #       orderDirection: desc
+    #       where: {
+    #         searchOrderStatus: open
+    #         searchIsLand: true
+    #       }
+    #     ){
+    #       activeOrder{
+    #         price
+    #         status
+    #         category
+    #       }
+    #     }
+    #   }
+    # """
     query = """
       query fetchNFTS(
         $count: Int,
@@ -18,13 +39,13 @@ def test_order_loader(
           orderDirection: desc
           where: {
             searchOrderStatus: open
-            searchIsLand: true
           }
         ){
           activeOrder{
             price
-            status
-            category
+          }
+          estate {
+            size
           }
         }
       }

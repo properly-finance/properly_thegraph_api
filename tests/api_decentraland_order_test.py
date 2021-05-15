@@ -11,8 +11,9 @@ def test_price_mean(
     app,
     count
 ):
-    response_stub = graphql_loader_json(consts.DECENTRALAND_PATHNAME,
-                                        f'{consts.DECENTRALAND_NFT_ORDER_FILENAME}_{count}')
+    response_stub = graphql_loader_json(
+        consts.DECENTRALAND_PATHNAME,
+        f'{consts.DECENTRALAND_NFT_ORDER_FILENAME}_{count}')
     patch_request_post(response_stub)
 
     response = client.get(f'/decentraland/orders/price-mean/{count}')
@@ -20,3 +21,4 @@ def test_price_mean(
     response_data = response.json
     assert response_data['count'] == count
     assert response_data['mean']
+    print(response_data['mean'])
