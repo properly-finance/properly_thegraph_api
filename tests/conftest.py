@@ -165,6 +165,15 @@ def patch_request_post(mocker):
 
 
 @pytest.fixture
+def patch_request_post_side_effect(mocker):
+    def wrap(side_effect_fn):
+        client = mocker.patch('requests.post',
+            mocker.Mock(side_effect=side_effect_fn, autospec=True))
+        return client
+    return wrap
+
+
+@pytest.fixture
 def patch_request_get(mocker):
     def wrap(patch_fixture):
         response_mock = mocker.Mock()
