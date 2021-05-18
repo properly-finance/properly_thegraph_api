@@ -34,6 +34,7 @@ def amount_mean(count: int = 10):
           orderDirection: desc
           where: {
             searchOrderStatus: open
+            searchIsLand: true
           }
         ){
           activeOrder{

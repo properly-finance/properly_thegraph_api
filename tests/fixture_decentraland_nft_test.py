@@ -39,6 +39,7 @@ def test_order_loader(
           orderDirection: desc
           where: {
             searchOrderStatus: open
+            searchIsLand: true
           }
         ){
           activeOrder{
